@@ -1,4 +1,4 @@
-﻿"""
+"""
 Smart Resume AI - Main Application
 """
 import time
@@ -1637,8 +1637,8 @@ class ResumeApp:
                             with cols[i % 2]:
                                 st.markdown(f"""
                                 <div style='background-color: #1e1e1e; padding: 15px; border-radius: 10px; margin: 10px 0;'>
-                                    <h4>{course[0]}</h4>
-                                    <a href='{course[1]}' target='_blank'>View Course</a>
+                                    <h4>{course.get('name', 'Course')}</h4>
+                                    <a href='{course.get('url', '#')}' target='_blank'>View Course</a>
                                 </div>
                                 """, unsafe_allow_html=True)
 
