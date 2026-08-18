@@ -1654,21 +1654,19 @@ class ResumeApp:
 
                     with tab1:
                             # Resume Videos
-                            for category, videos in RESUME_VIDEOS.items():
-                                st.subheader(category)
-                                cols = st.columns(2)
-                                for i, video in enumerate(videos):
-                                    with cols[i % 2]:
-                                        st.video(video[1])
+                            st.subheader("Resume Improvement Tips")
+                            cols = st.columns(2)
+                            for i, video in enumerate(RESUME_VIDEOS):
+                                with cols[i % 2]:
+                                    st.video(video.get('url', ''))
 
                     with tab2:
                             # Interview Videos
-                            for category, videos in INTERVIEW_VIDEOS.items():
-                                st.subheader(category)
-                                cols = st.columns(2)
-                                for i, video in enumerate(videos):
-                                    with cols[i % 2]:
-                                        st.video(video[1])
+                            st.subheader("Interview Preparation Tips")
+                            cols = st.columns(2)
+                            for i, video in enumerate(INTERVIEW_VIDEOS):
+                                with cols[i % 2]:
+                                    st.video(video.get('url', ''))
 
                     st.markdown("</div>", unsafe_allow_html=True)
 
