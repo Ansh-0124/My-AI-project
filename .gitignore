@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Environment
+.env
+
+# Database
+*.db
+
+# IDE
+.vscode/
+.idea/
+.DS_Store
+
+# Data exports
+*.xlsx
+
+# Poppler binary
+poppler.zip
