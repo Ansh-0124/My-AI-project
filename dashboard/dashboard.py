@@ -11,7 +11,8 @@ from io import BytesIO
 
 class DashboardManager:
     def __init__(self):
-        self.conn = get_database_connection()
+        import sqlite3
+        self.conn = sqlite3.connect('resume_data.db', check_same_thread=False)
         self.colors = {
             'primary': '#4CAF50',
             'secondary': '#2196F3',
